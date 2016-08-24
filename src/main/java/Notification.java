@@ -10,8 +10,7 @@ public class Notification {
 
 	private IMessage message;
 
-	public Notification(IMessage message){
-		this.message=message;
+	public Notification(){
 	}
 
 	  public IMessage getMessage() {
