@@ -22,9 +22,17 @@ public class MessageFeatureToggle implements IMessage {
 
 		LDClient client = new LDClient("sdk-548dca6e-ae25-4a5f-861d-8f854a267956");
 
-		LDUser user = new LDUser("alejosd5@gmail.com");
+		//LDUser user = new LDUser("alejosd5@gmail.com");
+		
+		 String valor = "6";
+		
+		 LDUser user2 = new LDUser.Builder("alejosd5@gmail.com")
+				   .custom("telefono", valor)   
+				   .build();
 
-		boolean showFeature = client.boolVariation("sd", user,false);
+		boolean showFeature = client.boolVariation("sd", user2,false);
+		
+		System.out.println("VALOR TOGGLE:"+showFeature);
 
 		if (showFeature) {
 
@@ -43,8 +51,5 @@ public class MessageFeatureToggle implements IMessage {
 
 		return message;
 	}
-
-
-
 
 }

@@ -36,6 +36,5 @@ public class ServletToggle extends HttpServlet {
 		
 		//Contenido de respuesta
 		resp.getWriter().println(notification.StrategyNotification().getMessage());
-
 	}
 }
