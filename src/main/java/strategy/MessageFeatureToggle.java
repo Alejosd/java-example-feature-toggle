@@ -36,12 +36,12 @@ public class MessageFeatureToggle implements IMessage {
 		if (showFeature) {
 
 
-			message.setMessage("Java Jetty Servlet Activado Feature Toggle Agile.   "+"usuario"+usuario+",telefono:"+valor);
+			message.setMessage("Java Jetty Servlet Activado Feature Toggle Agile.   "+"usuario:  "+usuario+",telefono:"+valor);
 			System.out.println("showing your feature");
 
 		} else {
 
-			message.setMessage("Java Jetty Servlet Desactivado Feature Toggle Agile.   "+"usuario"+usuario+",telefono:"+valor);
+			message.setMessage("Java Jetty Servlet Desactivado Feature Toggle Agile.   "+"usuario:  "+usuario+",telefono:"+valor);
 			System.out.println("Not showing your feature");
 
 		}
