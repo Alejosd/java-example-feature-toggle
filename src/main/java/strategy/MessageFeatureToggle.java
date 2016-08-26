@@ -23,8 +23,9 @@ public class MessageFeatureToggle implements IMessage {
 		LDClient client = new LDClient("sdk-548dca6e-ae25-4a5f-861d-8f854a267956");
 		
 		 String valor = "12345";
+		 String usuario = "asierrdu";
 		
-		 LDUser user = new LDUser.Builder("asierrdu")
+		 LDUser user = new LDUser.Builder(usuario)
 				   .custom("telefono", valor)   
 				   .build();
 
@@ -35,12 +36,12 @@ public class MessageFeatureToggle implements IMessage {
 		if (showFeature) {
 
 
-			message.setMessage("Java Jetty Servlet Activado Feature Toggle Agile"+valor);
+			message.setMessage("Java Jetty Servlet Activado Feature Toggle Agile"+"usuario"+usuario+",telefono:"+valor);
 			System.out.println("showing your feature");
 
 		} else {
 
-			message.setMessage("Java Jetty Servlet Desactivado Feature Toggle Agile"+valor);
+			message.setMessage("Java Jetty Servlet Desactivado Feature Toggle Agile"+"usuario"+usuario+",telefono:"+valor);
 			System.out.println("Not showing your feature");
 
 		}
