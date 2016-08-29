@@ -15,6 +15,8 @@ import strategy.MessageFeatureToggle;
 
 public class ServletToggle extends HttpServlet {
 
+	private IMessage messageStrategy;
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -23,7 +25,7 @@ public class ServletToggle extends HttpServlet {
 		Message text = new Message();
 		
 		//Estrategia a implementar feature Toggle
-		IMessage messageStrategy =  new MessageFeatureToggle(text);
+		setMessageStrategy(new MessageFeatureToggle(text));
 		
 		//clase contexto
 		Notification notification = new Notification();
@@ -36,5 +38,13 @@ public class ServletToggle extends HttpServlet {
 		
 		//Contenido de respuesta
 		resp.getWriter().println(notification.StrategyNotification().getMessage());
+	}
+
+	IMessage getMessageStrategy() {
+		return messageStrategy;
+	}
+
+	void setMessageStrategy(IMessage messageStrategy) {
+		this.messageStrategy = messageStrategy;
 	}
 }
