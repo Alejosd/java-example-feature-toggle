@@ -1,3 +1,4 @@
+package service;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -9,8 +10,8 @@ import org.eclipse.jetty.http.HttpStatus;
 
 import model.Message;
 import strategy.IMessage;
-import strategy.MessageActive;
 import strategy.MessageFeatureToggle;
+import strategy.Notification;
 
 
 public class ServletToggle extends HttpServlet {
