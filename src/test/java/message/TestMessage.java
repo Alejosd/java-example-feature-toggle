@@ -27,7 +27,9 @@ public class TestMessage {
 
 	@Test
 	public void test() {
-		assertTrue(true);
+		String message = "hello world";
+		String result = "Hello World";
+		assertEquals(message,result);
 	}
 
 }
